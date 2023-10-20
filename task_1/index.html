@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Тестовое задание</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="schedule__block">
+        <h1 class="schedule__heading">График работы сотрудников ООО «Коннект»</h1>
+        <form class="schedule__form">
+          <label class="schedule__label" for="city">Выберите город</label>
+          <select class="schedule__select schedule__select__active" name="city" id="city"></select>
+          <label class="schedule__label" for="workshop">Выберите цех</label>
+          <select class="schedule__select" name="workshop" disabled id="workshop"></select>
+          <label class="schedule__label" for="worker" class="">Выберите работника</label>
+          <select class="schedule__select" name="worker" disabled id="worker"></select>
+          <div class="schedule__appointment schedule__animate">
+            <div class="schedule__appointment__block">
+              <label class="schedule__appointment__heading">Выберите график</label>
+              <label class="schedule__label">Выберите бригаду</label>
+              <select class="schedule__select schedule__select__active" name="brigade" id="brigade"></select>
+              <div class="schedule__appointment__shifts" id="shiftContainer"></div>
+              <input class="schedule__btn__save" disabled type="button" value="Сохранить" />
+            </div>
+          </div>
+          <div class="schedule__result schedule__animate">
+            <h3 class="schedule__result__heading">График работы</h3>
+            <p class="schedule__result__text">
+              <span class="schedule__result__important">Сотрудник: </span>
+              <span id="worker_value"></span>
+            </p>
+            <p class="schedule__result__text">
+              <span class="schedule__result__important">Бригада: </span>
+              <span id="brigade_value"></span>
+            </p>
+            <p class="schedule__result__text">
+              <span class="schedule__result__important">Смена: </span>
+              <span id="shift_value"></span>
+            </p>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+  <script type="module" defer src="js/data.js"></script>
+  <script type="module" defer src="js/script.js"></script>
+</html>

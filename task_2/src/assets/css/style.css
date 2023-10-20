@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', 'Segoe UI', sans-serif;
+}
+
+html {
+  background-color: #eee;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.schedule__block {
+  margin-top: 10px;
+  padding: 25px 35px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.schedule__heading {
+  margin: 5px 0px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.schedule__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule__label {
+  display: inline-block;
+  margin: 5px 3px;
+  opacity: 0.7;
+  font-size: 12px;
+}
+
+.schedule__select {
+  margin: 5px 0px;
+  border-radius: 2px;
+  border: 1px solid #dedede;
+  padding: 4px 6px;
+  outline: none;
+  cursor: not-allowed;
+}
+
+.schedule__select__active {
+  cursor: pointer;
+}
+
+.schedule__appointment__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule__appointment__heading {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  margin: 7px 0px;
+}
+
+.schedule__appointment__shifts {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.schedule__shift {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.schedule__btn__save {
+  display: block;
+  margin: 10px auto 0px auto;
+  padding: 4px 8px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #dedede;
+  cursor: pointer;
+}
+
+.schedule__btn__save:hover {
+  opacity: 0.8;
+}
+
+.schedule__animate {
+  transform: translateY(0%);
+  opacity: 0;
+  margin-bottom: -150px;
+}
+
+.schedule__animate__show {
+  transform: translateY(-10%);
+  animation: showResult 0.3s forwards;
+}
+
+.schedule__animate__hidden {
+  transform: translateY(0%);
+  animation: hideResult 0.3s forwards;
+}
+
+@keyframes showResult {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+    margin-bottom: -150px;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    margin-bottom: 25px;
+  }
+}
+
+@keyframes hideResult {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+    margin-bottom: 25px;
+  }
+  100% {
+    display: none;
+    transform: translateY(-10%);
+    opacity: 0;
+    margin-bottom: -150px;
+  }
+}
+
+.schedule__result__heading {
+  text-align: center;
+}
+
+.schedule__result__text,
+.schedule__result__important {
+  font-size: 14px;
+}
+
+.schedule__result__important {
+  font-weight: bold;
+}
